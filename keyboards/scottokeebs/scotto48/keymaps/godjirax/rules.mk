@@ -1,0 +1,3 @@
+COMBO_ENABLE = yes
+RAW_ENABLE = yes
+SRC += $(KEYMAP_PATH)/hid.c
