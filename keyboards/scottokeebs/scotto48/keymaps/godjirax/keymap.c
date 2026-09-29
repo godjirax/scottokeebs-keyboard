@@ -83,7 +83,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_TILD, KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC, KC_CIRC, KC_AMPR,    KC_ASTR,    KC_LPRN, KC_RPRN, QK_BOOT,
         KC_DEL,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_UNDS,    KC_PLUS,    KC_LCBR, KC_RCBR, KC_PIPE,
         _______, KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  S(KC_NUHS), S(KC_NUBS), KC_HOME, KC_END,  _______,
-        _______, KC_BRID, KC_BRIU, _______, _______, _______, _______, _______,    KC_MNXT,    KC_VOLD, KC_VOLU, KC_MPLY
+        _______, KC_BRID, KC_BRIU, _______, _______, LGUI(LSFT(KC_4)), _______, _______,    KC_MNXT,    KC_VOLD, KC_VOLU, KC_MPLY
     ),
 
     [_ADJUST] = LAYOUT_ortho_4x12(
@@ -161,7 +161,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             } else {
                 layer_off(_LOWER);
                 if (!star_used) {
-                    tap_code16(FR_ASTR);
+                    tap_code16(FR_DLR);
                 }
                 star_pressed = false;
             }
